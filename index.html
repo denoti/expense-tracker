@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Expense Tracker</title>
+  </head>
+  <body>
+    <h1>EXPENSE TRACKER</h1>
+    <main>
+      <div class="container">
+        <div class="item-container">
+          <div class="value-container">
+            <label for="target">Target</label>
+            <input type="number" id="target" placeholder="10000" />
+          </div>
+          <div class="value-container">
+            <label for="expense" title="CLICK TO EDIT">Expense</label>
+            <input type="number" id="expense" placeholder="10000" />
+          </div>
+          <div class="value-container">
+            <label for="balance">Balance</label>
+            <input type="number" id="balance" disabled placeholder="10000" />
+          </div>
+        </div>
+        
+      </div>
+      <div class="btn">
+        <button class="add">ADD ITEM</button>
+        <button class="submit">SUBMIT</button>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
