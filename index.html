@@ -12,9 +12,14 @@
       <div class="container input-expenses">
         <div class="item-container">
           <div class="value-container">
-            <label for="expense" title="CLICK TO EDIT" contenteditable="true"
-              >Item</label
-            >
+            <input
+              for="expense"
+              title="CLICK TO EDIT"
+              contenteditable="true"
+              id="item-expense"
+              autofocus
+              placeholder="Item"
+            />
             <input type="number" id="expense" placeholder="10000" />
           </div>
         </div>
@@ -32,8 +37,8 @@
               <input type="number" id="target" placeholder="10000" disabled />
             </div>
             <div class="expense-container">
-              <label for="expense" title="CLICK TO EDIT">Expense</label>
-              <input type="number" id="expense" placeholder="10000" disabled />
+              <label for="expense">Expense</label>
+              <input type="number" placeholder="10000" disabled />
             </div>
             <div class="expense-container">
               <label for="balance">Balance</label>
@@ -53,15 +58,18 @@
             <input type="number" id="target" placeholder="10000" disabled />
           </div>
           <div class="expense-container">
-            <label for="expense" title="CLICK TO EDIT">Total Expenses</label>
-            <input type="number" id="expense" placeholder="10000" disabled />
+            <label for="expense">Total Expenses</label>
+            <input type="number" placeholder="10000" disabled />
           </div>
           <div class="expense-container">
             <label for="balance">Total Balance</label>
             <input type="number" id="balance" disabled placeholder="10000" />
           </div>
         </div>
-        <button class="home-expense">Homepage</button>
+        <div class="footer">
+          <button class="home-expense">Homepage</button>
+          <input type="date" class="date-picker" />
+        </div>
       </div>
     </main>
 
