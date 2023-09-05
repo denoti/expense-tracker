@@ -9,20 +9,53 @@
   <body>
     <h1>EXPENSE TRACKER</h1>
     <main>
-      <div class="container">
+      <div class="container input-expenses">
         <div class="item-container">
           <div class="value-container">
-            <label for="expense" title="CLICK TO EDIT" contenteditable="true">Item</label>
+            <label for="expense" title="CLICK TO EDIT" contenteditable="true"
+              >Item</label
+            >
             <input type="number" id="expense" placeholder="10000" />
           </div>
         </div>
+        <div class="btn">
+          <button class="add">ADD ITEM</button>
+          <button class="submit">SUBMIT</button>
+          <button>View Expenses</button>
+        </div>
       </div>
-      <div class="btn">
-        <button class="add">ADD ITEM</button>
-        <button class="submit">SUBMIT</button>
-      </div>
-      <div class="view-expense">
-        <h3><a href="./expenses.html">View Expenses</a></h3>
+      <div class="expenses-values">
+        <div class="container">
+          <div class="expenses-container">
+            <div class="expense-container">
+              <label for="target">Budget</label>
+              <input type="number" id="target" placeholder="10000" />
+            </div>
+            <div class="expense-container">
+              <label for="expense" title="CLICK TO EDIT">Expense</label>
+              <input type="number" id="expense" placeholder="10000" />
+            </div>
+            <div class="expense-container">
+              <label for="balance">Balance</label>
+              <input type="number" id="balance" disabled placeholder="10000" />
+            </div>
+          </div>
+        </div>
+        <div class="expenses-container">
+          <div class="expense-container">
+            <label for="target">Total Budget</label>
+            <input type="number" id="target" placeholder="10000" disabled />
+          </div>
+          <div class="expense-container">
+            <label for="expense" title="CLICK TO EDIT">Total Expenses</label>
+            <input type="number" id="expense" placeholder="10000" disabled />
+          </div>
+          <div class="expense-container">
+            <label for="balance">Total Balance</label>
+            <input type="number" id="balance" disabled placeholder="10000" />
+          </div>
+        </div>
+        <button class="home-expense">Homepage</button>
       </div>
     </main>
 

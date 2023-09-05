@@ -18,25 +18,7 @@ main {
   margin: 0 auto;
 }
 
-.item-container {
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-}
 
-.value-container {
-  margin: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-.value-container input {
-  width: 100px;
-  border: 1px solid brown;
-  border-radius: 5px;
-  padding: 5px;
-  outline: none;
-  margin-left: 30px;
-}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -47,19 +29,4 @@ input::-webkit-inner-spin-button {
 label {
   font-size: 20px;
   text-transform: uppercase;
-}
-
-.home-expense {
-  display: flex;
-  justify-content: center;
-}
-
-.home-expense h3 a {
-  text-decoration: none;
-  color: antiquewhite;
-   text-transform: uppercase;
-}
-
-.home-expense h3 a:visited {
-  color: brown;
 }

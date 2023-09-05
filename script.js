@@ -8,7 +8,6 @@ function createBudget() {
   valueContainer.classList.add('value-container');
   let label = document.createElement('label');
   label.textContent = 'Budget';
-  label.contentEditable = true;
   let input = document.createElement('input');
   input.setAttribute('id', 'budget');
   input.setAttribute('type', 'number');
@@ -21,6 +20,7 @@ function createExpense() {
   valueContainer.classList.add('value-container');
   let label = document.createElement('label');
   label.textContent = 'Item';
+  label.setAttribute('title', 'CLICK HERE TO EDIT');
   label.contentEditable = true;
   let input = document.createElement('input');
   input.setAttribute('id', 'expense');
@@ -40,4 +40,4 @@ addBtn.onclick = () => {
   log(itemContainer.children.length);
 };
 
-log(itemContainer.children.length)
+log(itemContainer.children.length);

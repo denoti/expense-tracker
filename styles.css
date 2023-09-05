@@ -7,13 +7,22 @@ body {
   align-items: center;
   justify-content: flex-start;
   height: 100vh;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 80%;
 }
 
+.input-expenses {
+  /* display: none; */
+  color: green;
+}
 .item-container {
   display: flex;
   flex-direction: column;
@@ -33,6 +42,34 @@ main {
   margin-left: 30px;
 }
 
+.expenses-values {
+  display: grid;
+  grid-template-rows: 80% 15% 5%;
+  margin: 0 auto;
+  height: 70vh;
+  display: none;
+}
+
+.expenses-container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.expense-container {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.expense-container input {
+  width: 100px;
+  border: 1px solid brown;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+  margin-left: 30px;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -41,22 +78,31 @@ input::-webkit-inner-spin-button {
 
 label {
   font-size: 20px;
+  padding: 3px;
   text-transform: uppercase;
 }
 
 .btn {
   display: flex;
-  justify-content: space-around;
+
+  gap: 15px;
   margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 button {
-  padding: 15px;
+  padding: 12px;
   border: none;
   border-radius: 5px;
   outline: none;
   text-transform: uppercase;
   font-family: cursive;
+  width: 100px;
+}
+
+button a {
+  text-decoration: none;
+  color: brown;
 }
 
 button:hover {
@@ -67,17 +113,41 @@ button:active {
   transform: scale(0.95);
 }
 
-.view-expense {
-  display: flex;
-  justify-content: center;
+button.home-expense {
+  margin: 40px auto;
+  height: 20px;
+  padding: 20px;
+  text-align: center;
+  line-height: 2px;
 }
 
-.view-expense h3 a {
-  text-decoration: none;
-  color: antiquewhite;
-  text-transform: uppercase;
-}
+@media screen and (max-width: 750px) {
+  body {
+    margin: 5px;
+    font-size: 14px;
+  }
+  main {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .expenses-values {
+    grid-template-rows: 80% 15% 5%;
+    height: 70vh;
+  }
 
-.view-expense h3 a:visited {
-  color: brown;
+  .expenses-container {
+    flex-direction: column;
+  }
+
+  .expense-container {
+    margin: 5px;
+  }
+  .expense-container input {
+    width: 50px;
+    border-radius: 5px;
+    padding: 3px;
+  }
+  button.home-expense {
+    margin: 60px auto;
+  }
 }
