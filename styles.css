@@ -47,7 +47,6 @@ main {
   grid-template-rows: 80% 15% 5%;
   margin: 0 auto;
   height: 70vh;
-  display: none;
 }
 
 .expenses-container {
@@ -119,6 +118,10 @@ button.home-expense {
   padding: 20px;
   text-align: center;
   line-height: 2px;
+}
+
+.hide {
+  display: none;
 }
 
 @media screen and (max-width: 750px) {

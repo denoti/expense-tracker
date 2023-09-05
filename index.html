@@ -21,23 +21,29 @@
         <div class="btn">
           <button class="add">ADD ITEM</button>
           <button class="submit">SUBMIT</button>
-          <button>View Expenses</button>
+          <button class="view-expenses">View Expenses</button>
         </div>
       </div>
-      <div class="expenses-values">
+      <div class="expenses-values hide">
         <div class="container">
           <div class="expenses-container">
             <div class="expense-container">
               <label for="target">Budget</label>
-              <input type="number" id="target" placeholder="10000" />
+              <input type="number" id="target" placeholder="10000" disabled />
             </div>
             <div class="expense-container">
               <label for="expense" title="CLICK TO EDIT">Expense</label>
-              <input type="number" id="expense" placeholder="10000" />
+              <input type="number" id="expense" placeholder="10000" disabled />
             </div>
             <div class="expense-container">
               <label for="balance">Balance</label>
-              <input type="number" id="balance" disabled placeholder="10000" />
+              <input
+                type="number"
+                id="balance"
+                disabled
+                placeholder="10000"
+                disabled
+              />
             </div>
           </div>
         </div>
