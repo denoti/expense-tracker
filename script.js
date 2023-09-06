@@ -75,64 +75,49 @@ datePicker.addEventListener('change', (e) => {
 submitBtn.addEventListener('click', () => {
   todaysDate();
   grabValues();
+
+  // window.location.reload();
 });
 
 // GRAB VALUES KEYED IN
+let importantData = [];
+
 function grabValues() {
-  const inputCost = document.querySelectorAll('#expense');
-  const labelExpense = document.querySelectorAll('#item-expense');
-  let x = Array.from(inputCost);
-  let y = Array.from(labelExpense);
-  log(('x', x[0].value), ('y', y[0].value));
+  const inputCost = Array.from(document.querySelectorAll('#expense'));
+  const labelExpense = Array.from(document.querySelectorAll('#item-expense'));
+  const budgetInput = Array.from(document.querySelectorAll('#budget'));
+
+  labelExpense.forEach((label, index) => {
+    if (budgetInput.length > 0) {
+      if (
+        !label.value ||
+        !inputCost[index].value ||
+        !budgetInput[index].value
+      ) {
+        return alert('KEY IN ALL FIELDS!!!');
+      }
+      let dataBlock = {
+        label: {
+          budget: budgetInput[index].value,
+          cost: inputCost[index].value,
+          expense: label.value,
+        },
+      };
+      importantData.push(dataBlock);
+    } else {
+      if (!label.value || !inputCost[index].value) {
+        return alert('KEY IN ALL FIELDS!!!');
+      }
+      let dataBlock = {
+        label: {
+          cost: inputCost[index].value,
+          expense: label.value,
+        },
+      };
+      importantData.push(dataBlock);
+    }
+  });
+  log(importantData);
 }
 
 // HOW OUR DATE WILL BE STORED
-let dataBlock = [
-  {
-    item: [
-      {
-        budget: 10000,
-        cost: [
-          {
-            100: '05/09/2023',
-            90: '05/09/2023',
-            200: '05/09/2023',
-            300: '05/09/2023',
-            500: '05/09/2023',
-            50: '05/09/2023',
-          },
-        ],
-      },
-    ],
-    item: [
-      {
-        budget: 10000,
-        cost: [
-          {
-            100: '05/09/2023',
-            90: '05/09/2023',
-            200: '05/09/2023',
-            300: '05/09/2023',
-            500: '05/09/2023',
-            50: '05/09/2023',
-          },
-        ],
-      },
-    ],
-    item: [
-      {
-        budget: 10000,
-        cost: [
-          {
-            100: '05/09/2023',
-            90: '05/09/2023',
-            200: '05/09/2023',
-            300: '05/09/2023',
-            500: '05/09/2023',
-            50: '05/09/2023',
-          },
-        ],
-      },
-    ],
-  },
-];
